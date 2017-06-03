@@ -1,6 +1,5 @@
 # VietPosTagger
-Vietnamese part of speech tagger based on the Vietnamese corpus found here:
-http://viet.jnlp.org/download-du-lieu-tu-vung-corpus
+Vietnamese part of speech tagger based on the Vietnamese corpus found [here](http://viet.jnlp.org/download-du-lieu-tu-vung-corpus).
 
 ## Tagset
 The tagset in use contains 17 main lexical tags:  
