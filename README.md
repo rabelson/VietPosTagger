@@ -2,7 +2,7 @@
 Vietnamese part of speech tagger based on the Vietnamese corpus found here:
 http://viet.jnlp.org/download-du-lieu-tu-vung-corpus
 
-### Tagset
+## Tagset
 The tagset in use contains 17 main lexical tags:  
 
 Np - Proper noun  
@@ -24,6 +24,6 @@ Y - Abbreviation
 Z - Bound morphemes  
 X - Unknown  
   
-#### Tools  
+### Tools  
 Vietnamese Tokenizer:  
 https://github.com/manhtai/vietseg  
