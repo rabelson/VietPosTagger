@@ -26,7 +26,7 @@ tagsetDict = {"Np" : 0,
               "T" : 14,
               "Y" : 15,
               "Z" : 16,
-              "X_train" : 17 }
+              "X" : 17 }
 
 wordBank = defaultdict()
 f_tagged = io.open("corpus/VNTQcorpus-small.tagged.txt", encoding='utf-8').read()
