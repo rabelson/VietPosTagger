@@ -44,8 +44,8 @@ f_tagged = io.open("corpus/VNTQcorpus-small.tagged.txt", encoding='utf-8').readl
 # Separate train and test set
 # train = f_tagged[:int(len(f)/2)]
 # test = f_tagged[int(len(f)/2):]
-train = f_tagged[:30000]
-test = f_tagged[30000:60000]
+train = f_tagged[:15000]
+test = f_tagged[15000:30000]
 
 # Get training data
 for line in train:
@@ -128,12 +128,14 @@ def feature(word,wordIdx, lineSize, line):
             if prevWord in wordBank:
                 prevPos = wordBank[prevWord]
                 maxPos = mostCommonBigrams[prevPos]
-                # posIdx_array[tagsetDict[maxPos]] = 1
+                if prevPos == "E":
+                    maxPos = 3
+                posIdx_array[tagsetDict[maxPos]] = 1
                 feat += posIdx_array + [tagsetDict[maxPos]]
                 return feat
             else:
                 posSet = list(tagsetDict.keys())[0]  # Naive: always choose Np for word we havent seen
-                # posIdx_array[tagsetDict[posSet]] = 1
+                posIdx_array[tagsetDict[posSet]] = 1
                 feat += posIdx_array + [0]
                 return feat
 
